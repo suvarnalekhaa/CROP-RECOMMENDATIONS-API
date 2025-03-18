@@ -7,7 +7,7 @@ document.getElementById("crop-form").addEventListener("submit", async function(e
     const soil = document.getElementById("soil").value;
 
     try {
-        const response = await fetch("https://your-app-name.onrender.com/api/recommend", {
+        const response = await fetch("https://crop-recommendations-api.onrender.com/api/recommend", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ city, soil })
