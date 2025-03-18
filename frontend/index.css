@@ -6,6 +6,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+main {
+    flex-direction: column;  /* Align content vertically */
+    align-items: center;     /* Center content */
+}
+
+#results {
+    width: 100%;
+    max-width: 600px;        /* Same width as the form */
+    margin-top: 20px;        /* Space between form and results */
+    display: none;           /* Hidden by default */
+}
+
 
 body {
     font-family: Arial, sans-serif;
