@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 import requests
 from datetime import datetime, timedelta
@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 
 # === App Initialization ===
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend', template_folder='frontend')
 CORS(app)
 load_dotenv()
 
@@ -126,6 +126,11 @@ def climate_adaptation_tip(rainfall, temp):
 
 
 # === Flask Route ===
+# === Flask Route ===
+@app.route('/')
+def home():
+    return render_template('index.html')
+
 @app.route('/api/recommend', methods=['POST'])
 def recommend():
     """API endpoint for crop recommendation."""
