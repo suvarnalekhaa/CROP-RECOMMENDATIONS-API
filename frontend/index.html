@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>Crop Recommendation System 🌾</h1>
+    </header>
+
+    <main>
+        <form id="crop-form">
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" name="city" placeholder="e.g., Chennai" required>
+
+            <label for="soil">Select Soil Type:</label>
+            <select id="soil" name="soil" required>
+                <option value="clay">Clay</option>
+                <option value="loamy">Loamy</option>
+                <option value="sandy">Sandy</option>
+            </select>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+
+        <section id="results" class="hidden">
+            <h2>Results for <span id="result-city"></span></h2>
+            <p><strong>Temperature:</strong> <span id="temp"></span> °C</p>
+            <p><strong>Humidity:</strong> <span id="humidity"></span> %</p>
+            <p><strong>Rainfall (last hour):</strong> <span id="rainfall"></span> mm</p>
+            <p><strong>Avg Rainfall (6 months):</strong> <span id="avg-rainfall"></span> mm</p>
+
+            <h3>Recommended Crops:</h3>
+            <ul id="recommended-crops"></ul>
+
+            <h3>Alternative Crops:</h3>
+            <ul id="alternative-crops"></ul>
+
+            <h3>Water Efficiency Tip:</h3>
+            <p id="water-tip"></p>
+
+            <h3>Climate Adaptation Tip:</h3>
+            <p id="climate-tip"></p>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
